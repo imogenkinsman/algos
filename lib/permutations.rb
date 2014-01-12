@@ -21,14 +21,14 @@ def my_permutations(str)
 end
 
 # TAOCP mentions that we can optimize our permutation algorithm if we limit it to distinct permutations
-def optimized_permutations(str, prior_string = "")
+def optimized_permutations(str)
   return Array(str) if str.size < 2
 
   ret_ary = []
   set = Set.new
   str.each_char do |char|
     if set.add?(char)
-      ret_ary += optimized_permutations(str.sub(char, ''), prior_string).map { |fragment| char + fragment }
+      ret_ary += optimized_permutations(str.sub(char, '')).map { |fragment| char + fragment }
     end
   end
 
