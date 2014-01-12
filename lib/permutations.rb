@@ -25,29 +25,12 @@ def optimized_permutations(str, prior_string = "")
   return Array(str) if str.size < 2
 
   ret_ary = []
-  if !PermutationSet.contain?(prior_string + str)
-    str.each_char do |char|
-      ret_ary += optimized_permutations(str.sub(char, ''), str).map { |fragment| char + fragment }
+  set = Set.new
+  str.each_char do |char|
+    if set.add?(char)
+      ret_ary += optimized_permutations(str.sub(char, ''), prior_string).map { |fragment| char + fragment }
     end
   end
 
   return ret_ary
-end
-
-# singletons may be evil but they work for my purposes here
-class PermutationSet
-  attr_accessor :set
-
-  def initialize
-    @set = Set.new
-  end
-
-  def self.instance
-    @@instance ||= PermutationSet.new
-  end
-
-  def self.contain?(str)
-    !instance.set.add?(str)
-  end
-
 end
