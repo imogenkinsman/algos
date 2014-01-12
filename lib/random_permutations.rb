@@ -8,6 +8,7 @@ def permute_by_sorting(ary)
   end
 end
 
+# aka the "knuth shuffle"
 # COMPLEXITY: O(n)
 def permute_in_order(ary)
   size = ary.size
