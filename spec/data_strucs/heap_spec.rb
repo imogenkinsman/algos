@@ -1,5 +1,4 @@
 require_relative '../../lib/data_strucs/heap'
-require 'ruby-debug'
 
 describe "max-heap" do
 
