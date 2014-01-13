@@ -9,6 +9,7 @@ def permutations(str)
 end
 
 # long-form without magic
+# trivia - this is O(n!), the same complexity as a brute-force solution to the traveling salesman problem
 def my_permutations(str)
   return Array(str) if str.size < 2
 
