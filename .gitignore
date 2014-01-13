@@ -1,3 +1,5 @@
 # IDE generated files
 #####################
 *.idea
+
+coverage/

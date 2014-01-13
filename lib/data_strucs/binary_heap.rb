@@ -16,7 +16,7 @@ class MaxHeap
   def initialize(ary)
     @heap = ary
     (ary.size / 2).downto(0) do |i|
-      max_heapify(i)
+      heapify(i)
     end
   end
 
@@ -33,9 +33,15 @@ class MaxHeap
     (index - 1) / 2
   end
 
+  def <<(value)
+    @heap << value
+    parent = parent(@heap.size - 1)
+    heapify(parent, :up) if parent >= 0
+  end
+
   private
 
-  def max_heapify(index)
+  def heapify(index, direction = :down)
     left = left(index)
     right = right(index)
     if !@heap[left].nil? && @heap[left] > @heap[index]
@@ -48,7 +54,11 @@ class MaxHeap
     end
     unless largest == index
       @heap[largest], @heap[index] = @heap[index], @heap[largest]
-      max_heapify(largest)
+      if direction == :down
+        heapify(largest)
+      elsif direction == :up && parent(index) >= 0
+        heapify(parent(index), :up)
+      end
     end
   end
 
