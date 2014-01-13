@@ -36,12 +36,18 @@ class MaxHeap
   def <<(value)
     @heap << value
     parent = parent(@heap.size - 1)
-    heapify(parent, :up) if parent >= 0
+    heapify(parent, :up)
+  end
+
+  def delete_at(index)
+
   end
 
   private
 
   def heapify(index, direction = :down)
+    return if index < 0
+
     left = left(index)
     right = right(index)
     if !@heap[left].nil? && @heap[left] > @heap[index]
@@ -56,7 +62,7 @@ class MaxHeap
       @heap[largest], @heap[index] = @heap[index], @heap[largest]
       if direction == :down
         heapify(largest)
-      elsif direction == :up && parent(index) >= 0
+      elsif direction == :up
         heapify(parent(index), :up)
       end
     end
