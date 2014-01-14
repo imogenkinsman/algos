@@ -39,8 +39,11 @@ class MaxHeap
     heapify(parent, :up)
   end
 
-  def delete_at(index)
-
+  def pop_max
+    @heap[0], @heap[@heap.size - 1] = @heap.last, @heap.first
+    max = @heap.pop
+    heapify(0) unless @heap.empty?
+    return max
   end
 
   private
@@ -55,7 +58,7 @@ class MaxHeap
     else
       largest = index
     end
-    if !@heap[right].nil? && @heap[right] > @heap[index]
+    if !@heap[right].nil? && @heap[right] > @heap[largest]
       largest = right
     end
     unless largest == index

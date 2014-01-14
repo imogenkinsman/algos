@@ -8,6 +8,9 @@ describe "max-heap" do
 
     heap = MaxHeap.new([5,2,3,-21,7,33])
     expect(heap.heap).to eq [33, 7, 5, -21, 2, 3]
+
+    heap = MaxHeap.new([4,2,3,6,5,1,7])
+    expect(heap.heap).to eq [7, 6, 4, 2, 5, 1, 3]
   end
 
   it "adds more nodes" do
