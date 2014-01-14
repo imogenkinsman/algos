@@ -29,4 +29,20 @@ def partition(ary, left, right)
   return i + 1
 end
 
-quick_sort([3,2,6,5,4,7,1,8])
+# randomly swap right-most element before partitioning to improve average performance
+# (chance of worst-case is like 1/n! regardless of the input)
+
+def randomized_quick_sort(ary, left = 0, right = ary.size - 1)
+  if left < right
+    q = randomized_partition(ary, left, right)
+    randomized_quick_sort(ary, left, q - 1)
+    randomized_quick_sort(ary, q + 1, right)
+  end
+  ary
+end
+
+def randomized_partition(ary, left, right)
+  i = rand(left..right)
+  ary[right], ary[i] = ary[i], ary[right]
+  partition(ary, left, right)
+end
