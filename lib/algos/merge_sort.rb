@@ -1,3 +1,10 @@
+# Sorts an array
+#
+# Uses a recursive approach - this algorithm is frequently taught as an introduction to the divide-and-conquer strategy.
+#
+# Performance: O(nlogn)
+
+
 def merge(left, right)
   ary = []
   until left.empty? || right.empty?

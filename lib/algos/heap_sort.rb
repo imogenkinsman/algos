@@ -14,7 +14,7 @@ def heap_sort(ary)
   heap = MaxHeap.new(ary)
   sorted_array = []
   until heap.heap.empty?
-    sorted_array.unshift(heap.pop_max)
+    sorted_array.unshift(heap.extract_max)
   end
 
   sorted_array

@@ -8,6 +8,9 @@
 # build_max_heap: O(n), builds a max-heap from an unordered input array
 # heapsort: O(nlgn), sorts an array in place.
 # max_heap_insert, heap_extract_max, heap_increase_key, heap_maxiumum: O(lgn), allow the heap to implement a priority queue
+#
+# Heaps typically aren't used for sorting (they're outperformed by some other algorithms) but can make for nice priority queues.
+# You can do a really optimal Dijkstra's implementation with a heap.
 
 
 class MaxHeap
@@ -39,15 +42,27 @@ class MaxHeap
     heapify(parent, :up)
   end
 
-  def pop_max
+  def max
+    @heap[0]
+  end
+
+  def extract_max
     @heap[0], @heap[@heap.size - 1] = @heap.last, @heap.first
     max = @heap.pop
     heapify(0) unless @heap.empty?
     return max
   end
 
+  # O(lgn)
+  def increase_key(index, value)
+    raise '' if value < @heap[index]
+    @heap[index] = value
+    heapify(parent(index), :up)
+  end
+
   private
 
+  # O(lgn)
   def heapify(index, direction = :down)
     return if index < 0
 
