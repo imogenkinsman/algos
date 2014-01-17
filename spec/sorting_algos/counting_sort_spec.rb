@@ -1,4 +1,4 @@
-require_relative '../../../lib/algos/sorting/counting_sort'
+require_relative '../../lib/sorting_algos/counting_sort'
 
 describe 'counting sort' do
 

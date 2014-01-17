@@ -22,6 +22,3 @@ def counting_sort(array, k)
   end
   output_array
 end
-
-#array = [3,2,5,4,1,6,0]
-#puts counting_sort(array, 6)

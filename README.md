@@ -10,6 +10,7 @@ Sorting Algorithms:
 - quick sort
 - counting sort
 - radix sort
+- bucket sort
 
 Algorithms:
 - max subarray (recursive, not optimal)

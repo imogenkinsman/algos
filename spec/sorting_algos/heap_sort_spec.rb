@@ -1,4 +1,4 @@
-require_relative '../../../lib/algos/sorting/heap_sort'
+require_relative '../../lib/sorting_algos/heap_sort'
 
 describe 'heap sort' do
 

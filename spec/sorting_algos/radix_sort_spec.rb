@@ -1,4 +1,4 @@
-require_relative '../../../lib/algos/sorting/radix_sort'
+require_relative '../../lib/sorting_algos/radix_sort'
 
 describe 'radix sort' do
 
