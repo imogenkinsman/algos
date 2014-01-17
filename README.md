@@ -3,13 +3,16 @@ Algos [![Build Status](https://travis-ci.org/zetsubo/algos.png?branch=master)](h
 
 This is an implementation of several common algorithms (and data structures) in Ruby. Much of it comes from algorithm descriptions in [Introduction to Algorithms](http://mitpress.mit.edu/books/introduction-algorithms).
 
-Algorithms:
+Sorting Algorithms:
 - merge sort
 - insertion sort
 - heap sort
 - quick sort
 - counting sort
-- max subarray (recursive, less optimal)
+- radix sort
+
+Algorithms:
+- max subarray (recursive, not optimal)
 - kadane's algorithm (optimal max subarray algorithm)
 
 Solutions to Common Problems:
