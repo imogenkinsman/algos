@@ -8,6 +8,7 @@ Algorithms:
 - insertion sort
 - heap sort
 - quick sort
+- counting sort
 - max subarray (recursive, less optimal)
 - kadane's algorithm (optimal max subarray algorithm)
 
