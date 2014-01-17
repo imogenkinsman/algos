@@ -1,4 +1,4 @@
-require_relative '../../lib/algos/merge_sort'
+require_relative '../../../lib/algos/sorting/merge_sort'
 
 describe "Merge Sort" do
 

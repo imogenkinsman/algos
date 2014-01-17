@@ -1,4 +1,4 @@
-require_relative '../../lib/algos/insertion_sort'
+require_relative '../../../lib/algos/sorting/insertion_sort'
 
 describe "Insertion Sort" do
 

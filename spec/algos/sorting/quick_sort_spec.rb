@@ -1,4 +1,4 @@
-require_relative '../../lib/algos/quick_sort'
+require_relative '../../../lib/algos/sorting/quick_sort'
 
 describe "quicksort" do
 
