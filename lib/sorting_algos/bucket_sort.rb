@@ -11,8 +11,15 @@
 
 require_relative 'insertion_sort'
 
-def bucket_sort(array)
+def bucket_sort(array, k = 10)
 
+  min, max = array.minmax
+  range = max - min
+  buckets = Array.new(k) { Array.new }
 
+  array.each do |val|
+    buckets[(val * (k - 1)) / range] << val
+  end
 
+  buckets.each(&:sort!).flatten
 end
