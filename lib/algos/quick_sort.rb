@@ -46,3 +46,6 @@ def randomized_partition(ary, left, right)
   ary[right], ary[i] = ary[i], ary[right]
   partition(ary, left, right)
 end
+
+# an even better implementation than randomly swapping the pivot with an element is to randomly pick 3 elements
+# and choose the median of the three
