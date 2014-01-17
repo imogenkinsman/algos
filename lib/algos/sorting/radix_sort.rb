@@ -19,8 +19,8 @@ def radix_sort(array)
       buckets[digit_value] << value
     end
 
-    array = []
-    buckets.each { |bucket| array += bucket }
+    array = buckets.flatten
   end
+
   array
 end
