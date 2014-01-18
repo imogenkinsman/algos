@@ -16,17 +16,16 @@ def quick_sort(ary, left = 0, right = ary.size - 1)
 end
 
 def partition(ary, left, right)
-  #puts "#{ary} is ary, #{left} is left, #{right} is right"
   pivot = ary[right]
-  i = left - 1
+  i = left
   left.upto(right - 1) do |j|
     if ary[j] <= pivot
-      i += 1
       ary[i], ary[j] = ary[j], ary[i]
+      i += 1
     end
   end
-  ary[i + 1], ary[right] = ary[right], ary[i + 1]
-  return i + 1
+  ary[i], ary[right] = ary[right], ary[i]
+  return i
 end
 
 # randomly swap right-most element before partitioning to improve average performance
