@@ -13,13 +13,10 @@ describe 'LinkedList' do
     expect(@ll.tail.value).to eq 5
   end
 
-  #it "prints its values" do
-  #end
-  #
-  #it "reverses! :D" do
-  #  @ll.reverse
-  #  expect(@ll.head.value).to eq 5
-  #  expect(@ll.tail.value).to eq 3
-  #end
+  it "reverses! :D" do
+    @ll.reverse
+    expect(@ll.head.value).to eq 5
+    expect(@ll.tail.value).to eq 3
+  end
 
 end

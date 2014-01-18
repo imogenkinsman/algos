@@ -14,7 +14,7 @@ class LinkedList
   end
 
   def insert(val)
-    if @head.nil?
+    unless @head
       @head = @tail = Node.new(val, nil)
     else
       old_tail = @tail
@@ -33,9 +33,24 @@ class LinkedList
   #  return s
   #end
 
+  def find
+    
+  end
+
   def reverse
 
-    head = @head
+    current_node = @head
+    previous_node = nil
+    next_node = nil
+
+    while current_node
+      next_node = current_node.next
+      current_node.next = previous_node
+      previous_node = current_node
+      current_node = next_node
+    end
+
+    @head, @tail = @tail, @head
 
   end
 end
