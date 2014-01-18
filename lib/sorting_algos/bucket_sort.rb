@@ -7,6 +7,8 @@
 # So, you make a bunch of buckets, drop stuff in the buckets, and then insertion sort them then add together.
 # Sounds dumb, right? Yep :D
 #
+# - will *not* work currently for negative values
+#
 # PERFORMANCE: O(n + k) average, O(n^2) worst
 
 require_relative 'insertion_sort'
@@ -18,7 +20,7 @@ def bucket_sort(array, k = 10)
   buckets = Array.new(k) { Array.new }
 
   array.each do |val|
-    buckets[(val * (k - 1)) / range] << val
+    buckets[[(val * k / range), k - 1].min] << val
   end
 
   buckets.each(&:sort!).flatten
