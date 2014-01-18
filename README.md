@@ -15,6 +15,8 @@ Sorting Algorithms:
 Algorithms:
 - max subarray (recursive, not optimal)
 - kadane's algorithm (optimal max subarray algorithm)
+- minmax
+- kth number (selection)
 
 Solutions to Common Problems:
 - fibonacci (recursive)
