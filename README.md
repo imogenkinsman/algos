@@ -17,6 +17,7 @@ Algorithms:
 - kadane's algorithm (optimal max subarray algorithm)
 - minmax
 - kth number (selection)
+- rod cutting
 
 Solutions to Common Problems:
 - fibonacci (recursive)
@@ -25,3 +26,4 @@ Solutions to Common Problems:
 
 Data Structures:
 - Binary Heap
+- Linked List

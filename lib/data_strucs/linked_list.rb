@@ -34,7 +34,7 @@ class LinkedList
   #end
 
   def find
-    
+
   end
 
   def reverse
