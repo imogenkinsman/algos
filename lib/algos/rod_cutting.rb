@@ -33,3 +33,24 @@ class DynamicCut
   end
 
 end
+
+class BottomUpDynamicCut
+
+  def initialize(prices)
+    @prices = prices
+  end
+
+  def solve(length)
+    memo = { 0 => 0}
+    1.upto(length) do |j|
+      max_value = -1
+      1.upto(j) do |i|
+        max_value = [max_value, @prices[i] + memo[j - i]].max
+      end
+      memo[j] = max_value
+    end
+
+    return memo[length]
+  end
+
+end
