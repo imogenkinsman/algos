@@ -18,11 +18,13 @@ Algorithms:
 - minmax
 - kth number (selection)
 - rod cutting
+- longest common subsequence
 
 Solutions to Common Problems:
 - fibonacci (recursive)
 - string permutations
 - random array permutations (including knuth shuffle)
+- change-making problem (dynamic programming)
 
 Data Structures:
 - Binary Heap

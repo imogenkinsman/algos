@@ -6,10 +6,6 @@
 # For this problem (as well other as typical DP algorithms), it can be solved either top-down with memoization or with a
 # bottom-up method
 
-#def memoized_cut_rod(prices, length)
-#
-#end
-
 class DynamicCut
 
   def initialize(prices)

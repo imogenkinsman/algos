@@ -10,7 +10,7 @@ def least_coins(value, denoms)
   1.upto(value) do |i|
     current_best = 9999
     denoms.each do |coin|
-      if (coin <= i && (coin - i <= 0))
+      if (coin <= i)
         current_best = [current_best, 1 + min_coins[i - coin]].min
       end
     end
