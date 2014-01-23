@@ -19,6 +19,7 @@ Algorithms:
 - kth number (selection)
 - rod cutting
 - longest common subsequence
+- longest increasing subsequence
 
 Solutions to Common Problems:
 - fibonacci (recursive)
