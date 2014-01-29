@@ -26,6 +26,7 @@ Solutions to Common Problems:
 - string permutations
 - random array permutations (including knuth shuffle)
 - change-making problem (dynamic programming)
+- activity selection problem (greedy)
 
 Data Structures:
 - Binary Heap
