@@ -21,3 +21,15 @@ class DynamicFib
   end
 
 end
+
+# why even use memoization at all when an iterative solution is O(n) ?
+
+def iterative_fibonacci(number)
+  numbers = [1,1]
+
+  3.upto(number) do
+    numbers << numbers[-1] + numbers[-2]
+  end
+
+  return numbers.last
+end
