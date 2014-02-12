@@ -1,3 +1,5 @@
+require 'matrix'
+
 # Uses recursion to find the nth number in the fibonacci sequence.
 #
 # Complexity: O(2^n)
@@ -22,7 +24,7 @@ class DynamicFib
 
 end
 
-# why even use memoization at all when an iterative solution is O(n) ?
+# a cleaner bottom-up DP solution that doesn't use memoization (less overhead and still O(n))
 
 def iterative_fibonacci(number)
   numbers = [1,1]
@@ -32,4 +34,12 @@ def iterative_fibonacci(number)
   end
 
   return numbers.last
+end
+
+#super cleverness - this can be done O(logn) using a matrix and exponentiation by squaring
+
+def matrix_fibonacci(number)
+  matrix = Matrix[[1,1],[1,0]]
+
+  (matrix ** (number - 1)) [0,0]
 end
