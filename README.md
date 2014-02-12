@@ -22,7 +22,7 @@ Algorithms:
 - longest increasing subsequence
 
 Solutions to Common Problems:
-- fibonacci (recursive)
+- fibonacci (recursive, dp, matrix)
 - string permutations
 - random array permutations (including knuth shuffle)
 - change-making problem (dynamic programming)
